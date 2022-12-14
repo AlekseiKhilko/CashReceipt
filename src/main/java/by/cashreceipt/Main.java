@@ -8,10 +8,9 @@ import java.util.Optional;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        args = new String[] {"1-10","2-20","3-10","Card-1","File-cash_receipt.txt"};
+        args = new String[] {"1-10","2-20","3-10","card-1","file-cash_receipt.txt"};
 
         PartMap partMap = new PartMap(args);
-
 
         ProductPromo productPromo = new ProductPromo(10, 5);
         List<Product> productList = new ArrayList<Product>();
@@ -28,17 +27,11 @@ public class Main {
         carList.add(new Card(1, 10));
         carList.add(new Card(2, 10));
 
-
-
         Integer vatRate = 17;
 
         ProductService productService = new ProductService(productList);
         Cart cart = new Cart(productService);
-        /*
-        cart.addItem(1, 1);
-        cart.addItem(2, 10);
-        cart.addItem(3, 10);
-         */
+
         for (Map.Entry<Integer, Integer> entry : partMap.getProductAndQuntity().entrySet()) {
             Integer product = entry.getKey();
             Integer quntity = entry.getValue();

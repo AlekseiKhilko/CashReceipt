@@ -63,7 +63,7 @@ public class PartMap {
 
     public Optional<Integer> getCard(){
         for (Map.Entry<String, String> entry : argsMap.entrySet()) {
-            if(entry.getKey().contains("Card")){
+            if(entry.getKey().contains("card")){
                 Integer cardNumber = Integer.valueOf(entry.getValue());
                 return Optional.of(cardNumber);
             }
@@ -74,7 +74,7 @@ public class PartMap {
 
     public Optional<String> getFilename(){
         for (Map.Entry<String, String> entry : argsMap.entrySet()) {
-            if(entry.getKey().contains("File")){
+            if(entry.getKey().contains("file")){
                 String filename = entry.getValue();
                 return Optional.of(filename);
             }
