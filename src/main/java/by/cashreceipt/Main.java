@@ -3,11 +3,12 @@ package by.cashreceipt;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        args = new String[] {"1-10","2-20","3-10","Card-1"};
+        args = new String[] {"1-10","2-20","3-10","Card-1","File-cash_receipt.txt"};
 
         PartMap partMap = new PartMap(args);
 
@@ -55,10 +56,13 @@ public class Main {
         cart.setVatRate(vatRate);
         cart.calculate();
 
-        String cashReceiptFilename = "./cash_receipt.txt";
         CashReceipt cashReceipt = new CashReceipt(cart);
         cashReceipt.print();
-        cashReceipt.save(cashReceiptFilename);
+
+        Optional<String> cashReceiptFilename = partMap.getFilename();
+        if(cashReceiptFilename.isPresent()) {
+            cashReceipt.save(cashReceiptFilename.get());
+        }
 
     }
 }

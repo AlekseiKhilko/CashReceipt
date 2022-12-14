@@ -71,4 +71,15 @@ public class PartMap {
         }
         return Optional.empty();
     }
+
+    public Optional<String> getFilename(){
+        for (Map.Entry<String, String> entry : argsMap.entrySet()) {
+            if(entry.getKey().contains("File")){
+                String filename = entry.getValue();
+                return Optional.of(filename);
+            }
+
+        }
+        return Optional.empty();
+    }
 }
