@@ -8,7 +8,7 @@ import java.util.Optional;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        args = new String[] {"1-10","2-20","3-10","card-1","file-cash_receipt.txt"};
+        //args = new String[] {"1-10","2-20","3-10","card-1","file-cash_receipt.txt"};
 
         PartMap partMap = new PartMap(args);
 
