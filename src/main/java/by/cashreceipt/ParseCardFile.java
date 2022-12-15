@@ -7,7 +7,7 @@ package by.cashreceipt;
         import java.util.Scanner;
 
 public class ParseCardFile {
-    private String filename = "/Users/alekseih/IdeaProjects/CashReceipt/src/main/java/by/cashreceipt/Card.txt";
+    private String filename = "./Card.txt";
 
     public List<Card> get() {
         try {

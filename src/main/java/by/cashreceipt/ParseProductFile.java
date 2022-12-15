@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ParseProductFile {
-    private String filename = "/Users/alekseih/IdeaProjects/CashReceipt/src/main/java/by/cashreceipt/Product.txt";
+    private String filename = "./Product.txt";
 
     public List<Product> get() {
         try {
