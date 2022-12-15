@@ -8,11 +8,13 @@ import java.util.Optional;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        args = new String[] {"1-10","2-20","3-10","card-1","file-cash_receipt.txt"};
+        //args = new String[] {"1-10","2-20","3-10","card-1","file-cash_receipt.txt"};
 
         PartMap partMap = new PartMap(args);
 
         ProductPromo productPromo = new ProductPromo(10, 5);
+        List<Product> productList = new ParseProductFile().get();
+        /*
         List<Product> productList = new ArrayList<Product>();
         productList.add(new Product(1, "Test product 1", 10.0, true));
         productList.add(new Product(2, "Test  product2 product2 product2 product2", 20.0, true));
@@ -21,11 +23,13 @@ public class Main {
         productList.add(new Product(5, "Test product 5", 110.4, true));
         productList.add(new Product(6, "Test product 6", 13.4));
         productList.add(new Product(7, "Test product 7", 70.4));
-        productList.add(new Product(8, "Test product product product product 8", 10.4));
+        productList.add(new Product(8, "Test product product product product 8", 10.4));*/
 
+        List<Card> carList = new ParseCardFile().get();
+        /*
         List<Card> carList = new ArrayList<Card>();
         carList.add(new Card(1, 10));
-        carList.add(new Card(2, 10));
+        carList.add(new Card(2, 10));*/
 
         Integer vatRate = 17;
 

@@ -39,16 +39,28 @@ public class CashReceiptTest {
     }
 
     @Test
+    void cardTest() {
+        Card card = new Card();
+        card.setId(1);
+        card.setDiscount(10);
+
+        assertTrue(card instanceof Card);
+        assertEquals(1, card.getId());
+        assertEquals(10, card.getDiscount());
+    }
+    @Test
     void creatCadListTest() {
         List<Card> carList = new ArrayList<Card>();
         carList.add(new Card(1, 10));
         carList.add(new Card(2, 10));
-        CardService cardService = new CardService(carList);
+        CardService cardService = new CardService();
+        cardService.setCardList(carList);
         Integer cardId = 1;
         Card card = cardService.findById(cardId);
 
         assertTrue(carList instanceof List<Card>);
         assertEquals(2, carList.size());
+        assertEquals(carList, cardService.getCardList());
         assertTrue(cardService instanceof CardService);
         assertTrue(card instanceof Card);
         assertEquals(1, card.getId());

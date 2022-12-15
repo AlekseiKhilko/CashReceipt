@@ -7,6 +7,8 @@ public class Product {
     private Double oldPrice = null;
     private Boolean promo = false;
 
+    public Product() {
+    }
     public Product(Integer id, String name, Double price) {
         this.id = id;
         this.name = name;

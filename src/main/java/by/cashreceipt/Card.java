@@ -4,6 +4,8 @@ public class Card {
     private Integer id;
     private Integer discount;
 
+    public Card() {
+    }
     public Card(Integer id, Integer discount) {
         this.id = id;
         this.discount = discount;

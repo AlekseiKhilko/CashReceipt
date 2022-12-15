@@ -5,6 +5,8 @@ import java.util.List;
 public class CardService {
     private List<Card> cardList;
 
+    public CardService() {
+    }
     public CardService(List<Card> cardList) {
         this.cardList = cardList;
     }

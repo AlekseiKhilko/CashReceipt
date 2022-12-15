@@ -1,0 +1,8 @@
+1;Test product 1;10.0;true;
+2;Test product2 product2 product2;20.0;true;
+3;Test product 3;10.0;true;
+4;Test product 4;10.4;true;
+5;Test product 5;110.4;true;
+6;Test product 6;13.4;;
+7;Test product 7;70.4;;
+8;Test product product product product 8;10.4;;
