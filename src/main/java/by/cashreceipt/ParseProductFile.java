@@ -12,6 +12,9 @@ public class ParseProductFile {
     public List<Product> get() {
         try {
             File file = new File(this.filename);
+            if(!file.exists()){
+                throw new FileNotFoundException("Could not find file: " + filename);
+            }
             Scanner scanner = new Scanner(file);
             List<Product> productList = new ArrayList<Product>();
             while(scanner.hasNextLine()){

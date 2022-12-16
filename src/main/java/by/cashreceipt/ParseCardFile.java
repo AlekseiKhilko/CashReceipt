@@ -12,6 +12,9 @@ public class ParseCardFile {
     public List<Card> get() {
         try {
             File file = new File(this.filename);
+            if(!file.exists()){
+                throw new FileNotFoundException("Could not find file: " + filename);
+            }
             Scanner scanner = new Scanner(file);
             List<Card> cardList = new ArrayList<Card>();
             while(scanner.hasNextLine()){
