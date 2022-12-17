@@ -39,7 +39,6 @@ public class ParseProductFile {
 
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            System.out.println("fuck");
         }
 
         return null;
